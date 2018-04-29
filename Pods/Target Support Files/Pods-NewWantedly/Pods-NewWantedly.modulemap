@@ -1,0 +1,6 @@
+framework module Pods_NewWantedly {
+  umbrella header "Pods-NewWantedly-umbrella.h"
+
+  export *
+  module * { export * }
+}
