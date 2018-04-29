@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		07BD688B2095C88B004AFDA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD688A2095C88B004AFDA2 /* AppDelegate.swift */; };
-		07BD688D2095C88B004AFDA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD688C2095C88B004AFDA2 /* ViewController.swift */; };
+		07BD688D2095C88B004AFDA2 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD688C2095C88B004AFDA2 /* SearchListViewController.swift */; };
 		07BD68902095C88B004AFDA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD688E2095C88B004AFDA2 /* Main.storyboard */; };
 		07BD68922095C88B004AFDA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BD68912095C88B004AFDA2 /* Assets.xcassets */; };
 		07BD68952095C88B004AFDA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD68932095C88B004AFDA2 /* LaunchScreen.storyboard */; };
+		07BD689E2095CE02004AFDA2 /* SearchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD689C2095CE02004AFDA2 /* SearchListTableViewCell.swift */; };
+		07BD689F2095CE02004AFDA2 /* SearchListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07BD689D2095CE02004AFDA2 /* SearchListTableViewCell.xib */; };
 		F9607F0FB25AB44DA3A16039 /* Pods_NewWantedly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C5D8197D9358D0DF187AD4 /* Pods_NewWantedly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07BD68872095C88B004AFDA2 /* NewWantedly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewWantedly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD688A2095C88B004AFDA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07BD688C2095C88B004AFDA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07BD688C2095C88B004AFDA2 /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
 		07BD688F2095C88B004AFDA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07BD68912095C88B004AFDA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07BD68942095C88B004AFDA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07BD68962095C88B004AFDA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BD689C2095CE02004AFDA2 /* SearchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListTableViewCell.swift; sourceTree = "<group>"; };
+		07BD689D2095CE02004AFDA2 /* SearchListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchListTableViewCell.xib; sourceTree = "<group>"; };
 		180C7E82D7FB6E3048867CCD /* Pods-NewWantedly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewWantedly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewWantedly/Pods-NewWantedly.debug.xcconfig"; sourceTree = "<group>"; };
 		2E65AC68720FA4016645C4CB /* Pods-NewWantedly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewWantedly.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewWantedly/Pods-NewWantedly.release.xcconfig"; sourceTree = "<group>"; };
 		68C5D8197D9358D0DF187AD4 /* Pods_NewWantedly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewWantedly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,11 +66,13 @@
 			isa = PBXGroup;
 			children = (
 				07BD688A2095C88B004AFDA2 /* AppDelegate.swift */,
-				07BD688C2095C88B004AFDA2 /* ViewController.swift */,
+				07BD688C2095C88B004AFDA2 /* SearchListViewController.swift */,
 				07BD688E2095C88B004AFDA2 /* Main.storyboard */,
 				07BD68912095C88B004AFDA2 /* Assets.xcassets */,
 				07BD68932095C88B004AFDA2 /* LaunchScreen.storyboard */,
 				07BD68962095C88B004AFDA2 /* Info.plist */,
+				07BD689C2095CE02004AFDA2 /* SearchListTableViewCell.swift */,
+				07BD689D2095CE02004AFDA2 /* SearchListTableViewCell.xib */,
 			);
 			path = NewWantedly;
 			sourceTree = "<group>";
@@ -151,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07BD68952095C88B004AFDA2 /* LaunchScreen.storyboard in Resources */,
+				07BD689F2095CE02004AFDA2 /* SearchListTableViewCell.xib in Resources */,
 				07BD68922095C88B004AFDA2 /* Assets.xcassets in Resources */,
 				07BD68902095C88B004AFDA2 /* Main.storyboard in Resources */,
 			);
@@ -223,7 +230,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07BD688D2095C88B004AFDA2 /* ViewController.swift in Sources */,
+				07BD689E2095CE02004AFDA2 /* SearchListTableViewCell.swift in Sources */,
+				07BD688D2095C88B004AFDA2 /* SearchListViewController.swift in Sources */,
 				07BD688B2095C88B004AFDA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
