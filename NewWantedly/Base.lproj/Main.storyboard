@@ -18,32 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUM-wQ-h4r">
-                                <rect key="frame" x="16" y="20" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Nx8-PJ-fRc"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="97Y-Rt-ROH">
                                 <rect key="frame" x="0.0" y="58" width="375" height="609"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OYK-6T-Q9g">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="fpZ-dn-SbP"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="97Y-Rt-ROH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="631-mB-TRv"/>
-                            <constraint firstItem="ZUM-wQ-h4r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FBa-9K-UaF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZUM-wQ-h4r" secondAttribute="trailing" constant="16" id="Jzp-6V-Ysa"/>
-                            <constraint firstItem="ZUM-wQ-h4r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aIH-wZ-cxC"/>
+                            <constraint firstItem="OYK-6T-Q9g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xdl-39-RiE"/>
                             <constraint firstItem="97Y-Rt-ROH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eQd-I0-FVn"/>
-                            <constraint firstItem="97Y-Rt-ROH" firstAttribute="top" secondItem="ZUM-wQ-h4r" secondAttribute="bottom" constant="8" id="mRr-1d-awd"/>
+                            <constraint firstItem="97Y-Rt-ROH" firstAttribute="top" secondItem="OYK-6T-Q9g" secondAttribute="bottom" constant="2" id="qtJ-fi-e8J"/>
+                            <constraint firstItem="OYK-6T-Q9g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uG2-G7-XYw"/>
                             <constraint firstAttribute="bottom" secondItem="97Y-Rt-ROH" secondAttribute="bottom" id="uZ5-95-E3e"/>
+                            <constraint firstItem="OYK-6T-Q9g" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wS4-zq-0aE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="seachBar" destination="OYK-6T-Q9g" id="JRx-mK-YW2"/>
+                        <outlet property="tableView" destination="97Y-Rt-ROH" id="IFV-hj-Uo3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
