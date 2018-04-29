@@ -15,6 +15,8 @@
 		07BD689E2095CE02004AFDA2 /* SearchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD689C2095CE02004AFDA2 /* SearchListTableViewCell.swift */; };
 		07BD689F2095CE02004AFDA2 /* SearchListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07BD689D2095CE02004AFDA2 /* SearchListTableViewCell.xib */; };
 		07BD68A12095D12D004AFDA2 /* CompanyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD68A02095D12D004AFDA2 /* CompanyResponse.swift */; };
+		07BD68A32095DA56004AFDA2 /* SessionRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD68A22095DA56004AFDA2 /* SessionRx.swift */; };
+		07BD68A52095DBAB004AFDA2 /* CompanyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD68A42095DBAB004AFDA2 /* CompanyRequest.swift */; };
 		F9607F0FB25AB44DA3A16039 /* Pods_NewWantedly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C5D8197D9358D0DF187AD4 /* Pods_NewWantedly.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		07BD689C2095CE02004AFDA2 /* SearchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListTableViewCell.swift; sourceTree = "<group>"; };
 		07BD689D2095CE02004AFDA2 /* SearchListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchListTableViewCell.xib; sourceTree = "<group>"; };
 		07BD68A02095D12D004AFDA2 /* CompanyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyResponse.swift; sourceTree = "<group>"; };
+		07BD68A22095DA56004AFDA2 /* SessionRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRx.swift; sourceTree = "<group>"; };
+		07BD68A42095DBAB004AFDA2 /* CompanyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRequest.swift; sourceTree = "<group>"; };
 		180C7E82D7FB6E3048867CCD /* Pods-NewWantedly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewWantedly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewWantedly/Pods-NewWantedly.debug.xcconfig"; sourceTree = "<group>"; };
 		2E65AC68720FA4016645C4CB /* Pods-NewWantedly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewWantedly.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewWantedly/Pods-NewWantedly.release.xcconfig"; sourceTree = "<group>"; };
 		68C5D8197D9358D0DF187AD4 /* Pods_NewWantedly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewWantedly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +80,8 @@
 				07BD689C2095CE02004AFDA2 /* SearchListTableViewCell.swift */,
 				07BD689D2095CE02004AFDA2 /* SearchListTableViewCell.xib */,
 				07BD68A02095D12D004AFDA2 /* CompanyResponse.swift */,
+				07BD68A22095DA56004AFDA2 /* SessionRx.swift */,
+				07BD68A42095DBAB004AFDA2 /* CompanyRequest.swift */,
 			);
 			path = NewWantedly;
 			sourceTree = "<group>";
@@ -235,6 +241,8 @@
 			files = (
 				07BD689E2095CE02004AFDA2 /* SearchListTableViewCell.swift in Sources */,
 				07BD688D2095C88B004AFDA2 /* SearchListViewController.swift in Sources */,
+				07BD68A32095DA56004AFDA2 /* SessionRx.swift in Sources */,
+				07BD68A52095DBAB004AFDA2 /* CompanyRequest.swift in Sources */,
 				07BD68A12095D12D004AFDA2 /* CompanyResponse.swift in Sources */,
 				07BD688B2095C88B004AFDA2 /* AppDelegate.swift in Sources */,
 			);
