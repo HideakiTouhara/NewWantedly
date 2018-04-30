@@ -16,6 +16,7 @@ class SearchListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.register(UINib.init(nibName: "SearchListTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchListTableViewCell")
+            tableView.rowHeight = 300
         }
     }
     @IBOutlet weak var seachBar: UISearchBar!
@@ -55,7 +56,7 @@ class SearchListViewController: UIViewController {
 
 extension SearchListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected")
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

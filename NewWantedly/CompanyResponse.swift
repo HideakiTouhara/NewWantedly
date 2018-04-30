@@ -30,6 +30,11 @@ struct CompanyResponse: Codable {
     
     struct Company: Codable {
         let name: String
+        let avatar: Avatar
+    }
+    
+    struct Avatar: Codable {
+        let original: String
     }
     
     struct Image: Codable {
