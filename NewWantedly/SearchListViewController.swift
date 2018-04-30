@@ -52,11 +52,21 @@ class SearchListViewController: UIViewController {
             })
             .disposed(by: bag)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PushDetail" {
+            let vc = segue.destination as! CompanyDetailViewController
+            if let indexPath = sender as? IndexPath {
+                vc.companyResponse = viewModel.comapanyListValue[indexPath.row]
+            }
+        }
+    }
 }
 
 extension SearchListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "PushDetail", sender: indexPath)
     }
 }
 

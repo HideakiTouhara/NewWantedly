@@ -15,6 +15,7 @@ struct CompanyResponses: Codable {
 struct CompanyResponse: Codable {
     let title: String
     let location: String
+    let description: String
     let lookingFor: String
     let image: Image
     let company: Company
@@ -22,6 +23,7 @@ struct CompanyResponse: Codable {
     private enum CodingKeys: String, CodingKey {
         case title
         case location
+        case description
         case lookingFor = "looking_for"
         case image
         case company
