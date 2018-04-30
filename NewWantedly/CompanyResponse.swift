@@ -8,25 +8,31 @@
 
 import Foundation
 
+struct CompanyResponses: Codable {
+    let data: [CompanyResponse]
+}
+
 struct CompanyResponse: Codable {
-    let resData: [ResData]
-    struct ResData: Codable {
-        let title: String
-        let image: [String]
-        let location: String
-        let lookingFor: String
-        let company: Company
-        let staffingsCount: String
-        private enum CodingKeys: String, CodingKey {
-            case title
-            case image
-            case location
-            case lookingFor = "looking_for"
-            case company
-            case staffingsCount = "staffings_count"
-        }
+    let title: String
+    let location: String
+    let lookingFor: String
+    let image: Image
+    let company: Company
+    let staffingsCount: Int
+    private enum CodingKeys: String, CodingKey {
+        case title
+        case location
+        case lookingFor = "looking_for"
+        case image
+        case company
+        case staffingsCount = "staffings_count"
     }
+    
     struct Company: Codable {
         let name: String
+    }
+    
+    struct Image: Codable {
+        let original: String
     }
 }

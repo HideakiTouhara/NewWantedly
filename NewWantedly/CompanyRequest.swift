@@ -9,6 +9,16 @@
 import Foundation
 import APIKit
 
+class JSONDataParser: APIKit.DataParser {
+    var contentType: String? {
+        return "application/json"
+    }
+    
+    func parse(data: Data) throws -> Any {
+        return data
+    }
+}
+
 protocol CompanyRequestType : Request {
     
 }
@@ -27,31 +37,35 @@ extension CompanyRequestType {
 }
 
 struct CompanyRequest: CompanyRequestType {
-    typealias Response = CompanyResponse
+    typealias Response = CompanyResponses
     var query: String
+    
+    init(query: String) {
+        self.query = query
+    }
+    
+    var queryParameters: [String : Any]? {
+        return [
+            "q": query as AnyObject,
+        ]
+    }
     
     var method: HTTPMethod {
         return .get
     }
     
     var path: String {
-        return "/api/v1"
+        return "/api/v1/projects"
     }
     
-    init(query: String) {
-        self.query = query
+    var dataParser: DataParser {
+        return JSONDataParser()
     }
     
-    var parameters: [String: AnyObject] {
-        return [
-            "projetcts": query as AnyObject,
-        ]
-    }
-    
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> CompanyResponse {
-        guard let dictionary = object as? Data else {
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> CompanyResponses {
+        guard let data = object as? Data else {
             throw ResponseError.unexpectedObject(object)
         }
-        return try JSONDecoder().decode(CompanyResponse.self, from: dictionary)
+        return try JSONDecoder().decode(CompanyResponses.self, from: data)
     }
 }

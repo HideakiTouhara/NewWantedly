@@ -12,7 +12,7 @@ import RxCocoa
 import APIKit
 
 class SearchListViewModel: NSObject {
-    var companyList = BehaviorRelay<[CompanyResponse]>(value: [])
+    private var _companyList = BehaviorRelay<[CompanyResponse]>(value: [])
     var error = BehaviorRelay<Error?>(value: nil)
     let bag = DisposeBag()
     
@@ -27,12 +27,24 @@ class SearchListViewModel: NSObject {
                 [weak self] event in
                 switch event {
                 case .next(let res):
-                    self?.companyList.accept(res)
+                    self?._companyList.accept(res.data)
                 case .error(let error):
                     self?.error.accept(error)
-                default: break
+                default:
+                    break
                 }
             }
             .disposed(by: bag)
+    }
+}
+
+// MARK: - OUTPUT
+extension SearchListViewModel {
+    var companyList: Observable<[CompanyResponse]> {
+        return _companyList.asObservable()
+    }
+    
+    var comapanyListValue: [CompanyResponse] {
+        return _companyList.value
     }
 }
